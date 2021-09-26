@@ -192,9 +192,13 @@ if __name__ == "__main__":
             indices.append(state_info[i].index)
 
     # Convert to binary
+    # print(indices)
     if len(indices) == 1:
         indices = indices[0].split()
-    # print(indices)
+    
+    if "Nan" in indices[0]:
+        raise ValueError (" No Solution in Input Array")
+
     indices = [np.binary_repr(int(i)) for i in indices]
     max_len = max(np.vectorize(len)(indices))
     if max_len == 1:
