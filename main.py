@@ -22,9 +22,6 @@ from qiskit.circuit.library import PhaseOracle
 from qiskit.circuit.library import GroverOperator
 from qiskit.visualization import plot_histogram
 
-"""Local Imports"""
-# from cnf_generator import generate_sat
-
 """Required Functions"""
 
 def ket(qc):
@@ -208,6 +205,7 @@ def generate_sat(size):
         f.write("c Phase Oracle Generating DIMACS-CNF N-SAT\n")
         f.write("p cnf {} {}\n".format(nqbits, 2**nqbits-2))
         f.write(cnf_data)
+
 #----------------START HERE----------------------
 
 if __name__ == "__main__":
@@ -244,7 +242,6 @@ if __name__ == "__main__":
             indices.append(state_info[i].index)
 
     # Convert to binary
-    # print(indices)
     if len(indices) == 1:
         indices = indices[0].split()
     
