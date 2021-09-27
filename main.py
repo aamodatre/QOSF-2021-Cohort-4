@@ -23,7 +23,7 @@ from qiskit.circuit.library import GroverOperator
 from qiskit.visualization import plot_histogram
 
 """Local Imports"""
-from cnf_generator import generate_sat
+# from cnf_generator import generate_sat
 
 """Required Functions"""
 
@@ -155,7 +155,59 @@ def compare_counts(cc, cg):
     else:
         return np.array([k for k in dict([ccsorted[-1]]).keys()], dtype = str)
 
+def generate_sat(size):
+    """ Function to generate a CNF file and treat the search as a SAT problem """
+    
+    nqbits = size
+    # Array of all solutions
+    basis = np.array([i for i in range(2**nqbits)])
 
+    # Convert to binary
+    bbasis = [np.binary_repr(int(i)) for i in basis]
+    max_len = max(np.vectorize(len)(bbasis))
+    bbasis = np.array([str(0)*(max_len-len(i))+i for i in bbasis])
+    
+    # creating possible solutions
+    max_int = 2**nqbits -1
+    N = bin(max_int)[2:]
+    # print(N)
+    
+    if size%2 != 0:
+        solA = 0
+        for i in range(0,nqbits,2):
+            solA += int(np.binary_repr(2**i))
+        solB = "0"+bin(int(str(N),2) - int(str(solA),2))[2:]
+    
+    elif size%2 == 0:
+        solA = ""
+        temp = 0
+        for i in range(0,nqbits,2):
+            temp += int(np.binary_repr(2**i))
+        solA += "0" + str(temp)
+        solB = bin(int(str(N),2) - int(str(solA),2))[2:]
+
+    # Removing possible solutions from CNF file
+    solA = str(solA)
+    sols = np.array((solA, solB))
+    # from pprint import pprint
+    # pprint(sols)
+    bbasis = np.setdiff1d(bbasis, sols)
+    
+    cnf_data = ""
+    for bit in bbasis:
+        stringy = ""
+        for num, i, in enumerate(bit):
+            if int(i)>0:
+                stringy += str((num+1)*(-1))+str(" ")
+            else:
+                stringy += str(num+1)+str(" ")
+        stringy += "0\n"
+        cnf_data += stringy
+
+    with open("./dimacs-data/nsat.dimacs", "w") as f:
+        f.write("c Phase Oracle Generating DIMACS-CNF N-SAT\n")
+        f.write("p cnf {} {}\n".format(nqbits, 2**nqbits-2))
+        f.write(cnf_data)
 #----------------START HERE----------------------
 
 if __name__ == "__main__":
