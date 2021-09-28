@@ -1,12 +1,12 @@
 # QOSF-2021
 
-This repository presents two solutions for Question 1 amongst the assessments tasks for QOSF Mentorship program 2021. The primary solution ```main.py``` presents a complete solution to the problem statement, searching a generalized 1D array for the specified condition, described below. However, in very specific cases, _main.py_ may fail to identify the right solutions, and for these reason, a more elegant approach (_alternative.py_) is presented. This alternative, however, currently identifies only succeeds in arrays with single solutions, and therefore should only be used in this capacity. Below, I've summarized the problem statement, outlines the approach of _main.py_, and highlighted some merits and flaws. 
+This repository presents two solutions for Question 1 amongst the assessments tasks for QOSF Mentorship program 2021. The primary solution ```main.py``` presents a complete solution to the problem statement, searching a generalized 1D array for the specified condition, described below. However, in very specific cases, ```main.py``` may fail to identify the right solutions, and for these reason, a more elegant approach (```alternative.py```) is presented. This alternative, however, currently identifies only succeeds in arrays with single solutions, and therefore should only be used in this capacity. Below, I've summarized the problem statement, outlines the approach of ```main.py```, and highlighted some merits and flaws. 
 
 ### Description of the Problem Statement (Q1):
 
 The problem statement requires users to submit a 1D non-negative integer array. The script is then required to identify numbers which, in their binary representation, consist of an alternating string of 1s and 0s. The output of the script, must be an appropriate superposition of the input array indices, in a binary representation, of the numbers which satisfy this criteria.
 
-### Approach and Merits of _main.py_ :
+### Approach and Merits of ```main.py``` :
 
 This script is written in Python3, with Numpy, Qiskit and Matplotlib as dependencies. It may be executed as:
 ```
