@@ -21,9 +21,9 @@ The solution follows the following step:
 4. The counts (or probabilites) obtained from these independent searches are compared and solution states are conditionally determined. 
 5. Based on the number of solutions obtained, an appropriate superposition of indices in the binary representation is returned. 
 
- #### Example [5, 2, \textcolor{red}{4}, 3]
+ #### Example [5, 2, , 3]
 
- 
+\textcolor{red}{4}
 _Merits of this approach_:
 
 1. Bonus question solved - The script is able to search for appropriate solutions for any number of qubits. 
