@@ -1,6 +1,6 @@
 # QOSF-2021
 
-This repository presents two solutions for Question 1 amongst the assessments tasks for QOSF Mentorship program 2021. The primary solution ```main.py``` presents a complete solution to the problem statement, searching a generalized 1D array for the specified condition, described below. However, in very specific cases, ```main.py``` may fail to identify the right solutions, and for these reason, a more elegant approach (```alternative.py```) is presented. This alternative, however, currently identifies only succeeds in arrays with single solutions, and therefore should only be used in this capacity. Below, I've summarized the problem statement, outlines the approach of ```main.py```, and highlighted some merits and flaws. 
+This repository presents a solution for Question 1 amongst the assessments tasks for QOSF Mentorship program 2021. The primary solution ```main.py``` presents a complete solution to the problem statement, searching a generalized 1D array for the specified condition, described below. However, in very specific cases, ```main.py``` may fail to identify the right solutions. Specific drawbacks of ```main.py``` are addressed in a limited capacity with an simplified yet effective approach ```alternative.py```. Below, I've summarized the problem statement, outlining the approach of ```main.py```, and highlighted its merits and flaws. 
 
 ### Description of the Problem Statement (Q1):
 
@@ -12,6 +12,7 @@ This script is written in Python3, with Numpy, Qiskit and Matplotlib as dependen
 ```
 python3 main.py
 ```
+The problem statement may formulated as a satisfiability problem, which is common in mathematics and computer sciences. Acknowledging that only number with alternating bits clear the speficied criterion, a CNF-format DIMACS file is generated. This file comprises of the clauses that quantum states need to satisfy. The CNF-DIMACS file allows the generation of an appropriate phase oracle, and Grover's diffuser operator. The outline of the algorithm is as follows. 
 
 The solution follows the following step:
 1. User-input array is stored in an ordered data-type, such as a list or tuple. 
@@ -45,7 +46,7 @@ After employing a variety of test cases, it is observed that ```main.py``` **may
 
 _**Alternative**_
 
-1. The first flaw listed above, is effectively solved with ```alternative.py```. 
+1. The first flaw listed above, is effectively solved with ```alternative.py```. This script creates product state of each number index and number in the binary representation. These product states are again solved as a satisfiability problem.
 
 - The alternative code may be executed as:
 ```
