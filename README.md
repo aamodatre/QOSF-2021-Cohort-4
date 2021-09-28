@@ -9,13 +9,11 @@ The problem statement requires users to submit a 1D non-negative integer array. 
 
 ### Approach and Merits of _main.py_ :
 
+This script is written in Python3, with Numpy, Qiskit and Matplotlib as dependencies. It may be executed as:
+```python3 main.py```
 
 The solution presented in this repository is based on Grover's search algorithms. The solution performs two searches, one with specific quantum state initialization, and one with equal superposition initialization. The obtained counts from these searches are compared and the solution states are determined. 
 
-The script is written in Python3, with Numpy, Qiskit and Matplotlib as dependencies. 
-```
-python3 main.py
-```
 _Merits of this approach_:
 
 1. Bonus question solved - The script is able to search for appropriate solutions for any number of qubits. 
