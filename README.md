@@ -50,11 +50,13 @@ _**Alternative**_
 
 The first flaw listed above, is effectively addressed with ```alternative.py```. This script presents an alternative approach to the satisfiability problem described above.
 
-In this approach, tensored states are generated between the binary representations of the array indices, and the binary representations of the numbers. Identifying the number of qubits required, potential solution states are identified, and constraints for a search are generated in a CNF-DIMACS file. This CNF-DIMACS file, based on these product states, allows the generation of appropriate phase oracle and Grover diffuser operator. 
+In this approach, tensored states are generated between the binary representations of the array indices, and the binary representations of the numbers. Identifying the number of qubits required, potential solution states are identified, and constraints for a search are generated in a CNF-DIMACS file. This CNF-DIMACS file allows the generation of appropriate phase oracle and Grover diffuser operator, and leads to the identification of the solution state.
 
+This approach is limited in capacity to identify and return indices for arrays which comprise of only one criteria satisfying number.
 
+- For example : In [1 1 1 5], the index for the 'solution' number 5 can be accurately identified. But for the array [2 1 1 5], both 2 and 5 cannot be identified.
 
-- The alternative code may be executed as:
+The alternative code may be executed as:
 ```
 python3 alternative.py
 ```
@@ -63,5 +65,4 @@ python3 alternative.py
 
 This program was built solely by referencing Qiskit's documentation pages. Some references for the DIMACS file formats are listed below. 
 
-(1)
-(2)
+(1) 
