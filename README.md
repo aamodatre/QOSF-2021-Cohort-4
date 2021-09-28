@@ -1,6 +1,6 @@
 # QOSF-2021 Assessment Task
 
-This repository presents a solution for Question 1 amongst the assessments tasks for QOSF Mentorship program 2021. The script ```main.py``` presents the prescribed solution to the problem statement, by searching a generalized 1D array for the specified condition, as described below. However, in very specific cases, ```main.py``` oracle may fail to identify the right solutions. Specific drawbacks of ```main.py``` are addressed in a limited capacity with an simplified yet effective approach ```alternative.py```. Below, I've summarized the problem statement, outlining the approach of ```main.py```, and highlighted its merits and flaws. 
+This repository presents a solution for Question 1 amongst the assessments tasks for QOSF Mentorship program 2021. The script ```main.py``` presents the prescribed solution to the problem statement, for searching a generalized 1D array for the specified condition, as described below. However, in very specific cases, ```main.py``` oracle may fail to identify the right solutions. Specific drawbacks of ```main.py``` are addressed in a limited capacity with an simplified yet effective approach ```alternative.py```. Below, the problem statement has been summarized, outlining the approach of ```main.py```, and highlighting its merits and flaws.
 
 ### Description of the Problem Statement (Q1):
 
@@ -15,10 +15,10 @@ python3 main.py
 
 The problem statement may formulated as a satisfiability problem, which is common in mathematics and computer sciences. Acknowledging that only binary numbers with alternating bits (0s and 1s) clear the specified criterion, a CNF-format DIMACS file is generated. This file comprises of the mathematical clauses that all quantum states with 'm' qubits are tested against. The CNF-DIMACS file allows the generation of an appropriate phase oracle, and Grover's diffuser operator using built-in Qiskit library functions. A subsequent Grover's search amplifies the quantum states which satisfy all clauses speficied in the DIMACS file. The outline of the algorithm is as follows. 
 
-The solution follows the following step:
+The solution follows the following steps:
 1. User-input array is stored in an ordered data-type, such as a list or tuple. 
 2. The binary representations of the input array are initialized as tensored quantum states with 'm' qubits.
-3. Two independent Grover's searches are conducted. One search is initilazed with an equal superpostion of all possible 'm' qubit states and the other is initialized with an equal superposition of states appearing in the user-input array.
+3. Two independent Grover's searches are conducted. One search is initilazed with an equal superpostion of all possible 'm' qubit tensor states and the other is initialized with an equal superposition of tensor states appearing in the user-input array.
 4. The counts (or probabilities) obtained from these independently run searches are compared and solution states are conditionally determined.
 5. Based on the number of solutions obtained, an appropriate superposition of indices in the binary representation is returned. 
 
@@ -44,7 +44,7 @@ After employing a variety of test cases, it is observed that ```main.py``` **may
     - For example, in the input array [1 1 1 5], 1 is incorrectly identified as the correct solution instead of 5.
 
 2. Multiple 'solution' numbers are repeated in the user-input array. 
-    - For example, input array [1 3 1 2] contains two instances of '1' and one instance of the '2', both of which satisfy aforemention criteria, and are solutions. However, all three of these may not be correctly idenfified. 
+    - For example, input array [1 3 1 2] contains two instances of '1' and one instance of the '2', both of which satisfy aforemention criteria, and are therefore solutions. However, all three of these may not be correctly idenfified. 
 
 3. The use of the Qiskit ```initialize()``` function for specific state initialization is a non-trivial step. In doing so, the engineering difficulties of generating the states through comibinations of gates and of maintaining the fidelity of the qubits in noisy and dissipative environments are glossed over. Initializing in an equal superposition of a few states amongst 2^n possibilites is an idealized scenario. 
 
@@ -52,7 +52,7 @@ _**Alternative**_
 
 The first flaw listed above, is effectively addressed with ```alternative.py```. This script presents an alternative approach to the satisfiability problem described above.
 
-In this approach, tensored states are generated between the binary representations of the array indices, and the binary representations of the numbers. Identifying the number of qubits required, potential solution states are identified, and constraints for a search are generated in a CNF-DIMACS file. This CNF-DIMACS file allows the generation of appropriate phase oracle and Grover diffuser operator, and leads to the identification of the solution state.
+In this approach, quantum states are generated by a tensor product between the binary representations of the array indices, and the binary representations of the numbers. By identifying the number of qubits required, potential solution states are identified, and constraints for a search are generated in a CNF-DIMACS file. This CNF-DIMACS file allows the generation of appropriate phase oracle and Grover diffuser operator, and leads to the identification of the solution state.
 
 This approach is limited in capacity to identify and return indices for arrays which comprise of only one criteria satisfying number.
 
