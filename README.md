@@ -40,13 +40,15 @@ _**Flaws**_
 
 After employing a variety of test cases, it is observed that ```main.py``` **may** return the incorrect indices if:
 
-1. Numbers which do not satisfy the specified criterion are repeated more than twice. For e.g. in the input array [1 1 1 5], 1 is incorrectly identified as the correct solution.
+1. Numbers which do not satisfy the specified criterion are repeated more than twice. 
+    - For example, in the input array [1 1 1 5], 1 is incorrectly identified as the correct solution instead of 5.
 
-2. Multiple 'solution' numbers are repeated several times. For e.g. [1 3 1 2] contains two instances of the solution '1' and one instance of the solution '2'. However, all three of these may not be correctly idenfified. 
+2. Multiple 'solution' numbers are repeated several times. 
+    - For example, input array [1 3 1 2] contains two instances of '1' and one instance of the '2', both of which satisfy aforemention criteria, and are solutions. However, all three of these may not be correctly idenfified. 
 
 _**Alternative**_
 
-1. The first flaw listed above, is effectively solved with ```alternative.py```. This script creates product state of each number index and number in the binary representation. These product states are again solved as a satisfiability problem.
+1. The first flaw listed above, is effectively addressed with ```alternative.py```. This script creates product state of each number index and number in the binary representation. These product states are again solved as a satisfiability problem.
 
 - The alternative code may be executed as:
 ```
