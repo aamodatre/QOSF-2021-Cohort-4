@@ -54,7 +54,8 @@ In this approach, tensored states are generated between the binary representatio
 
 This approach is limited in capacity to identify and return indices for arrays which comprise of only one criteria satisfying number.
 
-- For example : In [1 1 1 5], the index for the 'solution' number 5 can be accurately identified. But for the array [2 1 1 5], both 2 and 5 cannot be identified.
+- For example : In [1 1 1 5], the index for the 'solution' number 5 can be accurately identified. 
+- However, for the array [2 1 1 5], both 2 and 5 cannot be identified.
 
 The alternative code may be executed as:
 ```
