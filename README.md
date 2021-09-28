@@ -47,7 +47,10 @@ _**Alternative**_
 
 1. The first flaw listed above, is effectively solved with ```alternative.py```. 
 
-- The alternative code may be executed as ```python3 alternative.py```.
+- The alternative code may be executed as:
+```
+python3 alternative.py
+```
 
 ### Resources:
 
