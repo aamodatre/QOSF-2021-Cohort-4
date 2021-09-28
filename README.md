@@ -48,7 +48,11 @@ After employing a variety of test cases, it is observed that ```main.py``` **may
 
 _**Alternative**_
 
-1. The first flaw listed above, is effectively addressed with ```alternative.py```. This script creates product state of each number index and number in the binary representation. These product states are again solved as a satisfiability problem.
+The first flaw listed above, is effectively addressed with ```alternative.py```. This script presents an alternative approach to the satisfiability problem described above.
+
+In this approach, tensored states are generated between the binary representations of the array indices, and the binary representations of the numbers. Identifying the number of qubits required, potential solution states are identified, and constraints for a search are generated in a CNF-DIMACS file. This CNF-DIMACS file, based on these product states, allows the generation of appropriate phase oracle and Grover diffuser operator. 
+
+
 
 - The alternative code may be executed as:
 ```
@@ -57,4 +61,7 @@ python3 alternative.py
 
 ### Resources:
 
-This program was built solely by referencing Qiskit's documentation pages.
+This program was built solely by referencing Qiskit's documentation pages. Some references for the DIMACS file formats are listed below. 
+
+(1)
+(2)
