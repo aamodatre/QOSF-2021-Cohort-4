@@ -66,6 +66,6 @@ python3 alternative.py
 
 Qiskit documentation was the primary reference for the implementation of Grover's algorithms. Some references for the DIMACS file formats are listed below:
 
-1. UT Austin's summary [Link](1)
+1. UT Austin's Summary [Link][1]
 
-[1] https://www.cs.utexas.edu/users/moore/acl2/manuals/current/manual/index-seo.php/SATLINK____DIMACS
+[1]: https://www.cs.utexas.edu/users/moore/acl2/manuals/current/manual/index-seo.php/SATLINK____DIMACS
