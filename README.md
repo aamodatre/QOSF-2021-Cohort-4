@@ -12,7 +12,8 @@ This script is written in Python3, with Numpy, Qiskit and Matplotlib as dependen
 ```
 python3 main.py
 ```
-The problem statement may formulated as a satisfiability problem, which is common in mathematics and computer sciences. Acknowledging that only binary numbers with alternating bits (0s and 1s) clear the speficied criterion, a CNF-format DIMACS file is generated. This file comprises of the mathematical clauses that all quantum states with 'm' qubits are tested against. The CNF-DIMACS file allows the generation of an appropriate phase oracle, and Grover's diffuser operator. A subsequent Grover's search amplifies the quantum states which satisfy all clauses speficied in the DIMACS file. The outline of the algorithm is as follows. 
+
+The problem statement may formulated as a satisfiability problem, which is common in mathematics and computer sciences. Acknowledging that only binary numbers with alternating bits (0s and 1s) clear the specified criterion, a CNF-format DIMACS file is generated. This file comprises of the mathematical clauses that all quantum states with 'm' qubits are tested against. The CNF-DIMACS file allows the generation of an appropriate phase oracle, and Grover's diffuser operator using built-in Qiskit library functions. A subsequent Grover's search amplifies the quantum states which satisfy all clauses speficied in the DIMACS file. The outline of the algorithm is as follows. 
 
 The solution follows the following step:
 1. User-input array is stored in an ordered data-type, such as a list or tuple. 
