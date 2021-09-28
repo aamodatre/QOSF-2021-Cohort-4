@@ -1,4 +1,4 @@
-# QOSF-2021
+# QOSF-2021 Assessment Task
 
 This repository presents a solution for Question 1 amongst the assessments tasks for QOSF Mentorship program 2021. The script ```main.py``` presents the prescribed solution to the problem statement, by searching a generalized 1D array for the specified condition, as described below. However, in very specific cases, ```main.py``` oracle may fail to identify the right solutions. Specific drawbacks of ```main.py``` are addressed in a limited capacity with an simplified yet effective approach ```alternative.py```. Below, I've summarized the problem statement, outlining the approach of ```main.py```, and highlighted its merits and flaws. 
 
