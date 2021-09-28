@@ -1,5 +1,4 @@
 # QOSF-2021
-Assessment Task solution for QOSF 2021.
 
 This repository presents two solutions for Question 1 amongst the assessments tasks for QOSF Mentorship program 2021. The primary solution (_main.py_) presents a complete solution to the problem statement, searching a generalized 1D array for the specified condition, described below. However, in very specific cases, _main.py_ may fail to identify the right solutions, and for these reason, a more elegant approach (_alternative.py_) is presented. This alternative, however, currently identifies only succeeds in arrays with single solutions, and therefore should only be used in this capacity. Below, I've summarized the problem statement, outlines the approach of _main.py_, and highlighted some merits and flaws. 
 
