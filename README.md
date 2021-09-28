@@ -23,7 +23,7 @@ The solution follows the following step:
 
  #### Example [5, 2, , 3]
 
-\textcolor{red}{4}
+<span style="color: red;">text</span>
 _Merits of this approach_:
 
 1. Bonus question solved - The script is able to search for appropriate solutions for any number of qubits. 
