@@ -46,6 +46,8 @@ After employing a variety of test cases, it is observed that ```main.py``` **may
 2. Multiple 'solution' numbers are repeated in the user-input array. 
     - For example, input array [1 3 1 2] contains two instances of '1' and one instance of the '2', both of which satisfy aforemention criteria, and are solutions. However, all three of these may not be correctly idenfified. 
 
+3. The use of the Qiskit ```initialize()``` function for specific state initialization is a non-trivial step. In doing so, the engineering difficulties of generating the states through comibinations of gates and of maintaining the fidelity of the qubits in noisy and dissipative environments are glossed over. Initializing in an equal superposition of a few states amongst 2^n possibilites is an idealized scenario. 
+
 _**Alternative**_
 
 The first flaw listed above, is effectively addressed with ```alternative.py```. This script presents an alternative approach to the satisfiability problem described above.
