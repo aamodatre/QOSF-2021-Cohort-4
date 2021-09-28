@@ -28,7 +28,7 @@ The solution follows the following step:
 - Output : (1/sqrt(2)) * [ket(00) + ket(01)]
 
 
-_Merits of this approach_:
+_**Merits of this approach**_:
 
 1. Bonus question solved - The script is able to search for appropriate solutions for any number of qubits. 
 
