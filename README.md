@@ -5,12 +5,17 @@ This repository presents two solutions for Question 1 amongst the assessments ta
 
 ### Description of the Problem Statement (Q1):
 
-The problem statement, requires users to submit a 1D non-negative integer array. The script is then required to identify numbers which, in their binary representation, consist of an alternating string of 1s and 0s. The output of the script, must be an appropriate superposition of the input array indices, in a binary representation, of the numbers which satisfy this criteria.
+The problem statement requires users to submit a 1D non-negative integer array. The script is then required to identify numbers which, in their binary representation, consist of an alternating string of 1s and 0s. The output of the script, must be an appropriate superposition of the input array indices, in a binary representation, of the numbers which satisfy this criteria.
 
 ### Approach and Merits of _main.py_ :
 
+
 The solution presented in this repository is based on Grover's search algorithms. The solution performs two searches, one with specific quantum state initialization, and one with equal superposition initialization. The obtained counts from these searches are compared and the solution states are determined. 
 
+The script is written in Python3, with Numpy, Qiskit and Matplotlib as dependencies. 
+```
+python3 main.py
+```
 _Merits of this approach_:
 
 1. Bonus question solved - The script is able to search for appropriate solutions for any number of qubits. 
