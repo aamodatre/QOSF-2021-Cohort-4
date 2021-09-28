@@ -64,6 +64,6 @@ python3 alternative.py
 
 ### Resources:
 
-This program was built solely by referencing Qiskit's documentation pages. Some references for the DIMACS file formats are listed below. 
+Qiskit documentation was the primary reference for the implementation of Grover's algorithms. Some references for the DIMACS file formats are listed below:
 
 (1) 
