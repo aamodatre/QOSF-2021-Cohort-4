@@ -43,7 +43,7 @@ After employing a variety of test cases, it is observed that ```main.py``` **may
 1. Numbers which do not satisfy the specified criterion are repeated more than twice. 
     - For example, in the input array [1 1 1 5], 1 is incorrectly identified as the correct solution instead of 5.
 
-2. Multiple 'solution' numbers are repeated several times. 
+2. Multiple 'solution' numbers are repeated in the user-input array. 
     - For example, input array [1 3 1 2] contains two instances of '1' and one instance of the '2', both of which satisfy aforemention criteria, and are solutions. However, all three of these may not be correctly idenfified. 
 
 _**Alternative**_
