@@ -10,10 +10,20 @@ The problem statement requires users to submit a 1D non-negative integer array. 
 ### Approach and Merits of _main.py_ :
 
 This script is written in Python3, with Numpy, Qiskit and Matplotlib as dependencies. It may be executed as:
-```python3 main.py```
+```
+python3 main.py
+```
 
-The solution presented in this repository is based on Grover's search algorithms. The solution performs two searches, one with specific quantum state initialization, and one with equal superposition initialization. The obtained counts from these searches are compared and the solution states are determined. 
+The solution follows the following step:
+1. User-input array is stored in an ordered data-type, such as a list or tuple. 
+2. The numbers, in their binary representation, are initialized as tensored quantum states with 'n' qubits.
+3. Two independent Grover's searches are run, one initilazed with an equal superpostion of all possible states and another with an equal superposition of states appearing in the user-input array.
+4. The counts (or probabilites) obtained from these independent searches are compared and solution states are conditionally determined. 
+5. Based on the number of solutions obtained, an appropriate superposition of indices in the binary representation is returned. 
 
+ #### Example [5, 2, \textcolor{red}{4}, 3]
+
+ 
 _Merits of this approach_:
 
 1. Bonus question solved - The script is able to search for appropriate solutions for any number of qubits. 
