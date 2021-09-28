@@ -29,16 +29,23 @@ The solution follows the following step:
 
 _**Merits of this approach**_:
 
-1. Bonus question solved - The script is able to search for appropriate solutions for any number of qubits. 
+1. Addresses the Bonus Question: The script accepts vectors with random values of size 2^n with m bits in length for each element and finds the appropriate state(s) from an oracle.
+ 
+2. Identifying repeated solutions: Single solutions repeated multiple times are identified accurately.
 
-2. When only one solution number is present, and repeated 'n' times, all 'n' binary indices are accurately returned in a equal superposition
+### Flaws and suggested alternatives:
 
-### Failures and Suggested Alternatives
+_**Flaws**_ 
 
-While 
+After employing a variety of test cases, it is observed that ```main.py``` **may** return the incorrect indices if:
 
-1. If more than one solution state repeated. For example, the input array [1 3 1 2] will fail to identify all three solutions (2 instances of '01' and 1 instance of '10') correctly. 
-2. If non-solution numbers are repeated more than once. For example, the input array [1 1 1 5] may not be able to identify the solution 5 (binary = 101).
+1. Numbers which do not satisfy the specified criterion are repeated more than twice. For e.g. in the input array [1 1 1 5], 1 is incorrectly identified as the correct solution.
+
+2. Multiple 'solution' numbers are repeated several times. For e.g. [1 3 1 2] contains two instances of the solution '1' and one instance of the solution '2'. However, all three of these may not be correctly idenfified. 
+
+_**Alternative**_
+
+1. The first flaw listed above, is effectively solved with ```alternative.py```. 
 
 - The alternative code may be executed as ```python3 alternative.py```.
 
