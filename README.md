@@ -21,9 +21,13 @@ The solution follows the following step:
 4. The counts (or probabilites) obtained from these independent searches are compared and solution states are conditionally determined. 
 5. Based on the number of solutions obtained, an appropriate superposition of indices in the binary representation is returned. 
 
- #### Example [5, 2, , 3]
+ #### Example [5, 2, 4, 3]
 
-<span style="color: red;">text</span>
+- Input : [5, 2, 4, 3] &#8594; (to binary) &#8594; [101, 010, 100, 011]
+- Idenfied solutions : [**101**, *010*, 100, 011] &#8594; (indices) &#8594; 0 and 1
+- Output : (1/sqrt(2)) * [ket(01)]
+
+
 _Merits of this approach_:
 
 1. Bonus question solved - The script is able to search for appropriate solutions for any number of qubits. 
