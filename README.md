@@ -23,9 +23,9 @@ The solution follows the following step:
 
  #### Example [5, 2, 4, 3]
 
-- Input : [5, 2, 4, 3] &#8594; (to binary) &#8594; [101, 010, 100, 011]
-- Idenfied solutions : [**101**, *010*, 100, 011] &#8594; (indices) &#8594; 0 and 1
-- Output : (1/sqrt(2)) * [ket(01)]
+- Input : [5, 2, 4, 3] &#8594; (to binary) &#8594; [101, 010, 100, 011].
+- Idenfied solutions : [**101**, **010**, 100, 011] &#8594; (identified indices) &#8594; 0 and 1.
+- Output : (1/sqrt(2)) * [ket(00) + ket(01)]
 
 
 _Merits of this approach_:
